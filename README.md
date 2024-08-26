@@ -12,6 +12,7 @@ Right click on the application Run as -> Spring Boot
    docker pull akramsarfraj/course-api:1
 
 # docker-compose.yaml
+
 services:
 
     db:
@@ -38,6 +39,8 @@ services:
         - 8080:8080
 
 volumes:
+
   postgres-data:
+  
     driver: local
 
