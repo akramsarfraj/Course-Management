@@ -13,16 +13,23 @@ Right click on the application Run as -> Spring Boot
 
 # docker-compose.yaml
 services:
+
     db:
+    
       image: postgres:15
-      environment: 
+      
+      environment:
+      
         - POSTGRES_PASSWORD=root
         - POSTGRES_USER=postgres
         - POSTGRES_DB=postgres
+        
       ports:
         - 5432:5432
+        
       volumes:
         - postgres-data:/var/lib/pgsql
+        
       restart: always
 
     springApp:
